@@ -1,4 +1,4 @@
-import {initialSlideHTML} from "./index.js";
+import {indexInit} from "./index.js";
 import {thirdSlide} from "./renderThirdSlide.js";
 
 export const changeSlide = (numberSlide) => {
@@ -9,7 +9,7 @@ export const changeSlide = (numberSlide) => {
         case 1:
             itemSlide.style.cssText = 'background-position: center top;';
             setTimeout((() => {
-                        currentSlide = initialSlideHTML;
+                        currentSlide = indexInit.initialSlideHTML;
                         itemSlide.innerHTML = currentSlide;
             }), 300);
             break;

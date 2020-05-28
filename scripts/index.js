@@ -1,10 +1,7 @@
 import {swipe} from './swipe.js';
 
-window.addEventListener('load', function () {
-    swipe.initSwipe();
-});
-
-export const initialSlideHTML = `
+export let indexInit = {
+    initialSlideHTML: `
     <div class="slide slide_1">
         <div class="indicators">
             <div class="ind_active">&#8226;</div> 
@@ -19,7 +16,21 @@ export const initialSlideHTML = `
         <img class="Ellipse_4" src="./img/Ellipse_4.png" alt=""/>
         <img class="Rectangle_5" src="./img/Rectangle_5.png" alt=""/>
     </div>
-`;
+    `,
 
-const itemSlide = document.querySelector('.slider');
-itemSlide.innerHTML = initialSlideHTML;
+    init: function () {
+        window.addEventListener('load', function () {
+            swipe.initSwipe();
+        });
+        const itemSlide = document.querySelector('.slider');
+        itemSlide.innerHTML = this.initialSlideHTML;
+    }
+};
+if (window.innerHeight !== 768 || window.innerWidth !== 1024) {
+    const itemSlide = document.querySelector('.slider');
+    itemSlide.innerHTML = `Откройте приложение в режиме совместимости с iPad (1024х768) и обновите страницу`;
+} else {
+    indexInit.init ();
+}
+
+
