@@ -32,7 +32,7 @@ export const swipe = {
                     if (that.finalPoint.pageY < that.initialPoint.pageY) { //если свайп вверх
                         if (that.counter === 1) {
                             that.counter = 2;
-                            changeSlide(that.counter);
+                            changeSlide(that.counter);                      //рисуем слайд пониже
                         } else if (that.counter === 2) {
                             that.counter = 3;
                             changeSlide(that.counter);
@@ -41,7 +41,7 @@ export const swipe = {
                         }
                     } else {                                                //если свайп вниз
                         if (that.counter === 1) {
-                            return;
+                            return;                                         //рисуем слайд повыше
                         } else if (that.counter === 2) {
                             that.counter = 1;
                             changeSlide(that.counter);

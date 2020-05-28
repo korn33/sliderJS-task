@@ -20,13 +20,13 @@ export let indexInit = {
 
     init: function () {
         window.addEventListener('load', function () {
-            swipe.initSwipe();
+            swipe.initSwipe();                                        //активируем свайпы на странице
         });
         const itemSlide = document.querySelector('.slider');
-        itemSlide.innerHTML = this.initialSlideHTML;
+        itemSlide.innerHTML = this.initialSlideHTML;                    //рисуем верхний слайд
     }
 };
-if (window.innerHeight !== 768 || window.innerWidth !== 1024) {
+if (window.innerHeight !== 768 || window.innerWidth !== 1024) {  //приверка того чтобы не рисовалась страница когда это не надо
     const itemSlide = document.querySelector('.slider');
     itemSlide.innerHTML = `Откройте приложение в режиме совместимости с iPad (1024х768) и обновите страницу`;
 } else {

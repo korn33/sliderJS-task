@@ -7,15 +7,15 @@ export const changeSlide = (numberSlide) => {
     let currentSlide = null;
     switch (numberSlide) {
         case 1:
-            itemSlide.style.cssText = 'background-position: center top;';
-            setTimeout((() => {
-                        currentSlide = indexInit.initialSlideHTML;
+            itemSlide.style.cssText = 'background-position: center top;'; //если swipe вызвал changeSlide(1) то
+            setTimeout((() => {                                             //ждем конца анимации погружения
+                        currentSlide = indexInit.initialSlideHTML;          //рисуем верхний слайд
                         itemSlide.innerHTML = currentSlide;
             }), 300);
             break;
         case 2:
-            itemSlide.style.cssText = 'background-position: center center;';
-            currentSlide = `<div class="slide slide_2">
+            itemSlide.style.cssText = 'background-position: center center;';    //если swipe вызвал changeSlide(2) то погружаемся
+            currentSlide = `<div class="slide slide_2">                          
                                 <div class="indicators">
                                     <div class="ind_none">&#8226;</div> 
                                     <div class="ind_active">&#8226;</div>
@@ -29,11 +29,11 @@ export const changeSlide = (numberSlide) => {
                                 <img class="Rectangle_5" src="./img/Rectangle_5.png" alt="">
                             </div>
             `;
-            itemSlide.innerHTML = currentSlide;
+            itemSlide.innerHTML = currentSlide; //рисуем средний слайд
             break;
         case 3:
             itemSlide.style.cssText = 'background-position: center bottom;';
-            thirdSlide.getThirdSlide(thirdSlide.currentIdThirdSlide);
+            thirdSlide.getThirdSlide(thirdSlide.currentIdThirdSlide); //рисуем нижний слайд
             break;
     }
 };

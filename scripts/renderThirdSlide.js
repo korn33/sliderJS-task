@@ -1,8 +1,8 @@
 import {getIdThirdSlide} from "./getIdThirdSlide.js";
 
 export const thirdSlide = {
-    thirdSlideArray: [
-            null,
+    thirdSlideArray: [              // массив с разметкой трех нижних слайдов
+            null,                   // нулевой элемент массива null чтобы было проще
             `<div class="slide_3">
                 <div class="indicators">
                     <div class="ind_none">&#8226;</div> 
@@ -70,13 +70,13 @@ export const thirdSlide = {
             `,
     ],
 
-    currentIdThirdSlide: 1,
+    currentIdThirdSlide: 1,  //запоминалка чтобы при всплытии-погружении был отображен последний активированный нижний слайд
 
     itemSlide: document.querySelector('.slider'),
 
-    getThirdSlide: function (idThirdSlide) {
+    getThirdSlide: function (idThirdSlide) { //swipe вызвал changeSlide(3), а он getThirdSlide(с тем id, который на ползунке)
         this.itemSlide.innerHTML = '';
-        this.itemSlide.innerHTML = this.thirdSlideArray[idThirdSlide];
-        getIdThirdSlide.getIdSlide();
+        this.itemSlide.innerHTML = this.thirdSlideArray[idThirdSlide]; //рисуем разметку
+        getIdThirdSlide.getIdSlide(); //оживляем ползунок
     },
 };

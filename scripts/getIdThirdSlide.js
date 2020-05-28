@@ -7,13 +7,12 @@ export const getIdThirdSlide = {
     getIdSlide: function () {
         let that = this;
         that.slider = document.getElementById('myRange');
-        that.slider.addEventListener('touchend', function () {
-            that.i = Number(that.slider.value);
-            if (that.i <= 25) {
-                thirdSlide.currentIdThirdSlide = 1;
-                document.querySelector('.slide_3').style.cssText = 'position: absolute; left: 1030px;';
-                thirdSlide.getThirdSlide(1);
-                let intervalID = setInterval(function () {
+        that.slider.addEventListener('touchend', function () { //когда отпустили ползунок
+            that.i = Number(that.slider.value); //запоминаем его место
+            if (that.i <= 25) { //в зависимости от этого места
+                thirdSlide.currentIdThirdSlide = 1; //пишем в запоминалку id третьего слайда
+                thirdSlide.getThirdSlide(1); //отображаем третий слайд с текущим id
+                let intervalID = setInterval(function () { //делаем анимацию примагничивания ползунка
                     that.slider.value = that.i;
                     that.i--;
                     if (that.i <= 1) {
@@ -22,7 +21,6 @@ export const getIdThirdSlide = {
                 }, 5);
             } else if (that.slider.value >= 26 && that.slider.value <= 50) {
                 thirdSlide.currentIdThirdSlide = 2;
-                document.querySelector('.slide_3').style.cssText = 'position: absolute; left: 1030px;';
                 thirdSlide.getThirdSlide(2);
                 let intervalID = setInterval(function () {
                     that.slider.value = that.i;
