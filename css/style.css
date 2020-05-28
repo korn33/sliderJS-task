@@ -1,0 +1,312 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+.slider {
+    transition: all ease 0.3s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/bg_min.png);
+    background-size: cover;
+    background-position: center top;
+}
+
+.slide_1 h1 {
+    color: #0d319c;
+    text-align: left;
+    position: absolute;
+    left: 100px;
+    top: 150px;
+    font-weight: normal;
+}
+.HbAlc {
+    position: absolute;
+    left: 61%;
+    top: 35%;
+    color: #0d319c;
+}
+
+.mgo-widget-call_pulse_Gipoglikemia {
+    position: absolute;
+    left: 27.5%;
+    top: 56.5%;
+}
+
+.mgo-widget-call_pulse {
+    position: absolute;
+    left: 56.5%;
+    top: 37%;
+}
+.Gipoglikemia {
+    color: #0d319c;
+    position: absolute;
+    left: 23%;
+    top: 50%;
+}
+.mgo-widget-call_pulse, .mgo-widget-call_pulse_Gipoglikemia {
+    height: 15px;
+    width: 15px;
+    background-color: #f77a1f;
+    border-radius: 100%;
+    opacity: .75;
+    -webkit-animation: shake 2s infinite ease-in-out;
+    animation: shake 2s infinite ease-in-out;
+    -webkit-animation-delay: .6s;
+    animation-delay: .6s;
+}
+.mgo-widget-call_pulse:after,
+.mgo-widget-call_pulse:before,
+.mgo-widget-call_pulse_Gipoglikemia:after,
+.mgo-widget-call_pulse_Gipoglikemia:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    top: 0;
+    background-color: #f77a1f;
+    border-radius: 100%;
+    -webkit-animation: pulse 2s infinite ease-in-out;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+.mgo-widget-call_pulse:before {
+    height: 65px;
+    width: 65px;
+    margin: auto 0 auto -32.5px;
+}
+
+.mgo-widget-call_pulse:after {
+    height: 92px;
+    width: 92px;
+    margin: auto 0 auto -46px;
+}
+
+.mgo-widget-call_pulse_Gipoglikemia:before {
+    height: 30px;
+    width: 30px;
+    margin: auto 0 auto -15px;
+}
+
+.mgo-widget-call_pulse_Gipoglikemia:after {
+    height: 42px;
+    width: 42px;
+    margin: auto 0 auto -21px;
+}
+
+.mgo-widget-call_pulse:before,
+.mgo-widget-call_pulse_Gipoglikemia:before {
+
+
+    opacity: .5;
+    -webkit-animation-delay: .6s;
+    animation-delay: .6s;
+}
+
+
+
+
+
+.mgo-widget-call_pulse:after,
+.mgo-widget-call_pulse_Gipoglikemia:after {
+
+    -webkit-animation-delay: .3s;
+    animation-delay: .3s;
+    opacity: .25;
+}
+
+
+
+
+
+@-webkit-keyframes pulse {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.shadow {
+    position: absolute;
+    bottom: -240%;
+    left: 50%;
+    margin-right: -50%;
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+    height: 1200px;
+    width: 1500px;
+    background-color: #fc0;
+    box-shadow: 0 -100px 50px 0 #f78b20;
+}
+
+.arrow {
+    z-index: 1;
+    height: 25px;
+    width: 50px;
+    position: absolute;
+    bottom: 1.5%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.go_to_bottom {
+    font-weight: lighter;
+    color: white;
+    z-index: 1;
+    position: absolute;
+    bottom: 4%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.slide_2 h2 {
+    color: white;
+    font-weight: normal;
+    font-size: 40px;
+    margin-top: 25%;
+    text-align: center;
+}
+
+.slidecontainer {
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slider-polz {
+    -webkit-appearance: none; /* переопределить умолчания */
+    appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #435063;
+    position: absolute;
+    top: 660px;
+}
+
+/* Ручка ползунка */
+.slider-polz::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    border: 0;
+    width: 50px;
+    height: 64px;
+    background-image: url("../img/slider_handle.png");
+}
+.indicators {
+    font-size: 30px;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 95%;
+    top: 40%;
+
+}
+.indicators .ind_active {
+    color: #f77a1f;
+}
+.indicators .ind_none {
+    color: white;
+}
+.h1_third_slide {
+    font-weight: normal;
+    color: white;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+}
+.time_date {
+    display: flex;
+    color: white;
+}
+.time {
+    position: absolute;
+    bottom: 2%;
+}
+.time_date .item {
+    margin: 0 152px;
+    font-size: large;
+}
+.ice_3_1 {
+    position: absolute;
+    left: 6%;
+    bottom: 2%;
+    z-index: -5;
+}
+
+.shem_3_1 {
+    position: absolute;
+    left: 23%;
+    top: 30%;
+    z-index: -5;
+}
+
+.shem_3_2 {
+    position: absolute;
+    left: 15%;
+    top: 20%;
+    z-index: -5;
+}
+
+.shem_3_3 {
+    position: absolute;
+    left: 3%;
+    top: 20%;
+    z-index: -5;
+}
+.ice_3_3 {
+    position: absolute;
+    bottom: 0;
+    z-index: -5;
+}
+
+.ice_3_2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -5;
+}
+
+.ice_2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -10;
+}
+.Ellipse_4 {
+     position: absolute;
+     bottom: 0;
+     left: 280px;
+     z-index: -5;
+ }
+
+.Rectangle_5 {
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    z-index: -6;
+}
