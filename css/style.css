@@ -47,6 +47,21 @@ body {
     left: 23%;
     top: 50%;
 }
+
+.SS_riski {
+    color: #0d319c;
+    position: absolute;
+    left: 78%;
+    top: 60%;
+}
+
+.oslojneniya_SD {
+    color: #0d319c;
+    position: absolute;
+    left: 40%;
+    top: 63%;
+}
+
 .mgo-widget-call_pulse, .mgo-widget-call_pulse_Gipoglikemia {
     height: 15px;
     width: 15px;
@@ -58,10 +73,45 @@ body {
     -webkit-animation-delay: .6s;
     animation-delay: .6s;
 }
+
+.mgo-widget-call_pulse_Gipoglikemia {
+    height: 11px;
+    width: 11px;
+}
+
+.mgo-widget-call_pulse_SS_riski {
+    position: absolute;
+    left: 80.7%;
+    top: 67.8%;
+}
+
+.mgo-widget-call_pulse_SS_riski, .mgo-widget-call_pulse_oslojneniya_SD {
+    height: 8px;
+    width: 8px;
+    background-color: #f77a1f;
+    border-radius: 100%;
+    opacity: .75;
+    -webkit-animation: shake 2s infinite ease-in-out;
+    animation: shake 2s infinite ease-in-out;
+    -webkit-animation-delay: .6s;
+    animation-delay: .6s;
+}
+
+.mgo-widget-call_pulse_oslojneniya_SD {
+    position: absolute;
+    left: 47.2%;
+    top: 70.5%;
+}
+
 .mgo-widget-call_pulse:after,
 .mgo-widget-call_pulse:before,
 .mgo-widget-call_pulse_Gipoglikemia:after,
-.mgo-widget-call_pulse_Gipoglikemia:before {
+.mgo-widget-call_pulse_Gipoglikemia:before,
+.mgo-widget-call_pulse_SS_riski:after,
+.mgo-widget-call_pulse_SS_riski:before,
+.mgo-widget-call_pulse_oslojneniya_SD:after,
+.mgo-widget-call_pulse_oslojneniya_SD:before
+{
     content: '';
     position: absolute;
     left: 50%;
@@ -98,28 +148,48 @@ body {
 }
 
 .mgo-widget-call_pulse:before,
-.mgo-widget-call_pulse_Gipoglikemia:before {
-
-
+.mgo-widget-call_pulse_Gipoglikemia:before,
+.mgo-widget-call_pulse_SS_riski:before,
+.mgo-widget-call_pulse_oslojneniya_SD:before {
     opacity: .5;
     -webkit-animation-delay: .6s;
     animation-delay: .6s;
 }
 
 
-
-
-
 .mgo-widget-call_pulse:after,
-.mgo-widget-call_pulse_Gipoglikemia:after {
-
+.mgo-widget-call_pulse_Gipoglikemia:after,
+.mgo-widget-call_pulse_SS_riski:after,
+.mgo-widget-call_pulse_oslojneniya_SD:after
+{
     -webkit-animation-delay: .3s;
     animation-delay: .3s;
     opacity: .25;
 }
 
+.mgo-widget-call_pulse_SS_riski:before {
+    height: 25px;
+    width: 25px;
+    margin: auto 0 auto -13px;
+}
 
+.mgo-widget-call_pulse_SS_riski:after {
+    height: 33px;
+    width: 33px;
+    margin: auto 0 auto -17px;
+}
 
+.mgo-widget-call_pulse_oslojneniya_SD:before {
+    height: 25px;
+    width: 25px;
+    margin: auto 0 auto -13px;
+}
+
+.mgo-widget-call_pulse_oslojneniya_SD:after {
+    height: 33px;
+    width: 33px;
+    margin: auto 0 auto -17px;
+}
 
 
 @-webkit-keyframes pulse {
